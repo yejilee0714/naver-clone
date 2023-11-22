@@ -72,12 +72,18 @@
         --color_dic_rgb: 3,31,95;
       }
 
-      html, body, form {
+      html, body {
         margin: 0;
         padding: 0;
         font-size: 10.5px;
         line-height: 10.5px;
         font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+        letter-spacing: -0.4px;
+      }
+
+      form, ul{
+        margin: 0;
+        padding: 0;
       }
 
       #wrap{
@@ -288,6 +294,10 @@
         height: 25px;
       }
 
+      #nav{
+        margin-top: 12px;
+      }
+
       #nav > ul{
         display: flex;
         list-style-type: none;
@@ -296,24 +306,21 @@
         line-height: 20px;
       }
 
-      #nav a{
-        text-decoration: none;
-      }
-
       #nav a div {
-        width: 44px;
-        height: 44px;
-        margin: 0 auto;
+        position: relative;
+        display: inline-flex;
+
       }
 
       #nav a div::after{
         content: "";
-        display: inline-block;
         background-image: url(https://pm.pstatic.net/resources/asset/sp_main.2b96eea2.png);
         background-size: 434px 414px;
         background-repeat: no-repeat;
         width: 44px;
         height: 44px;
+        position: relative;
+        margin: 2px;
       }
 
       #nav a:visited{
@@ -327,6 +334,20 @@
 
       #nav li:nth-of-type(1){
         margin-left: 0;
+      }
+
+      #nav li a div::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: -3px;
+        background-image: url(https://pm.pstatic.net/resources/asset/sp_main.2b96eea2.png);
+        background-size: 434px 414px;
+        background-position: 0px -128px;
+        background-repeat: no-repeat;
+        width: 54px;
+        height: 54px;
       }
 
       #nav li:nth-of-type(1) a div::after{
@@ -357,8 +378,18 @@
         background-position: -45px -209px;
       }
     
+      #nav li:nth-of-type(8) a div::before{
+        left: -1px;
+      }
       #nav li:nth-of-type(8) a div::after{
         background-position: -201px 0px;
+        width: 48px;
+        height: 48px;
+        top: -2px;
+      }
+
+      #nav li:nth-of-type(8) a span {
+        margin-top: 1px;
       }
       
       #nav li:nth-of-type(9) a div::after{
@@ -367,6 +398,11 @@
       
       #nav li:nth-of-type(10) a div::after{
         background-position: -250px -135px;
+      }
+
+      #nav li a span{
+        display: inline-block;
+        margin-top: 5px;
       }
       
     </style>
