@@ -440,6 +440,116 @@
 
       #main-newstand {
         height: 426px;
+        display: flex;
+        flex-flow: column;
+      }
+
+      #main-newstand-top {
+        flex: 1;
+        padding: 18px 20px;
+      }
+
+      #main-newstand-top .dot::before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: var(--color_dot_divider);
+        margin: 9px 7px 0;
+        border-radius: 50%;
+        vertical-align: top;
+      }
+
+      #main-newstand-top .slash, #main-newstand-top .dot {
+        font-weight: 800;
+        color: rgba(8, 8, 8, .5);
+      }
+
+      #main-newstand-top .slash{
+        position: relative;
+        padding-left: 26px;
+      }
+
+      #main-newstand-top .slash::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 4px;
+        left: 13px;
+        width: 1px;
+        height: 15px;
+        background-color: var(--color_dot_divider);
+        transform: skewX(-15deg);
+      }
+
+      #main-newstand header {
+        font-size: 1.6rem;
+        color: rgba(8, 8, 8, .5);
+        display: flex;
+        justify-content: flex-start;
+        line-height: 23px;
+        margin-bottom: 17px;
+      }
+      
+      #main-newstand header .bold {
+        font-weight: bold;
+        color: black;
+      }
+      
+      #main-newstand-gray {
+        display: flex;
+        justify-content: flex-start;
+        height: 26px;
+        padding: 12px 20px;
+        background-color: var(--color_option_bg);
+        border-radius: 4px;
+        font-size: 1.4rem;
+        line-height: 26px;
+      }
+
+      #main-newstand-gray .left{
+        flex: 1;
+        display: flex;
+      }
+
+      #main-newstand a {
+        text-decoration: none;
+      }
+
+      #main-newstand a:visited {
+        color: inherit;
+      }
+
+      #main-newstand a hover { 
+        text-decoration: underline;
+      }
+
+      #main-newstand-grid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 224px;
+        grid-gap: 1px;
+        background-color: var(--color_border_in);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 790px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        border: 1px solid var(--color_border_in);
+        border-radius: 4px;
+        margin-top: 18px;
+      }
+
+      #main-newstand-grid > div {
+        height: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #main-newstand footer {
+        border-top: 1px solid var(--color_border_in);
+        padding: 10px 0 11px;
       }
       
       #main-shopping {
@@ -462,6 +572,7 @@
         font-size: 1.3rem;
         display: flex;
         justify-content: center;
+        margin-top: 16px;
       }
 
       #main-login > div:last-of-type a {
@@ -487,7 +598,6 @@
         background-color: #d3d5d7;
         background-color: var(--color_dot_divider);
         margin: 4px 12px 0;
-        /* vertical-align: top; */
       }
 
       #main-login-btn{
@@ -499,7 +609,7 @@
         background-color: #03c75a;
         color: white;
         text-decoration: none;
-        margin-bottom: 16px;
+        /* margin-bottom: 16px; */
       }
 
       #main-login-btn i {
@@ -665,7 +775,61 @@
       <main id="main">
         <div id="main-left">
           <aside id="main-left-ad"></aside>
-          <section id="main-newstand"></section>
+          <section id="main-newstand">
+            <div id="main-newstand-top">
+              <header>
+                <a href="#" class="bold">뉴스스탠드</a>
+                <a href="#" class="dot">언론사편집</a>
+                <a href="#" class="slash">엔터</a>
+                <a href="#" class="slash">스포츠</a>
+                <a href="#" class="slash">경제</a>
+              </header>
+              <div id="main-newstand-gray">
+                <div class="left">
+                  <a href="#">전체언론사</a>
+                  <a href="#">연합뉴스</a>
+                  <a href="#">다자녀 가정 부담 완화... 둘째부터 출산지원금 300만원으로 확대</a>
+                </div>
+                <div class="right">
+                  <a href="#">뉴스스탠드</a>
+                  <a href="#">뉴스홈</a>
+                </div>
+              </div>
+              <div id="main-newstand-grid">
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+                <div>언론사</div>
+              </div>
+            </div>
+            <footer>
+              <button><span class="blind">이전</span></button>
+              <div>언론사 더보기1페이지 전체/4</div>
+              <button><span class="blind">다음</span></button>
+              <button><span class="blind">목록보기</span></button>
+              <button><span class="blind">격자보기</span></button>
+            </footer>
+          </section>
           <section id="main-shopping"></section>
         </div>
         <div id="main-right">
