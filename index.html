@@ -856,30 +856,56 @@
       }
 
       #main-shopping-grid {
-        margin-top: 20px;
+        margin-top: 18px;
         display: grid;
-        grid-template-rows: 90px 95px 185px;
-        grid-template-columns: 1fr 1fr 1fr 1fr 250px;
-        column-gap: 20px;
+        grid-template-rows: 90px 95px 170px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 250px;
+        column-gap: 8px;
       }
 
-      .item:nth-child(1), .item:nth-child(2), .item:nth-child(3), .item:nth-child(4) {
+      #main-shopping-grid .item {
+        font-size: 1.3rem;
+        line-height: 19px;
+        letter-spacing: -.4px;
+      }
+
+      #main-shopping-grid .item > .image {
+        width: 98px;
+        height: 126px;
+        border-radius: 4px;
+        background-color: gray;
+        margin-bottom: 8px;
+      }
+
+      #main-shopping-grid .item > .text {
+        text-align: left;
+      }
+
+      .item:nth-child(1), .item:nth-child(2), .item:nth-child(3), .item:nth-child(4), .item:nth-child(5) {
         grid-row: 1 / span 2;
       }
 
-      .item:nth-child(5), .item:nth-child(6), .item:nth-child(11) > div:first-child {
-        padding: 9px 12px 4px;
+      .item:nth-child(6), .item:nth-child(7), .item:nth-child(13) > div:first-child {
         border-radius: 4px;
         border: 1px solid rgba(0,0,0,.05);
         background: rgba(245,248,251,.6);
+        margin-left: 12px;
       }
-
+      
       .item:nth-child(6) {
-        margin: 11px 0;
+        padding: 9px 12px 4px;
       }
 
-      .item:nth-child(11) > div:first-child {
-        height: 135px;
+      .item:nth-child(7) {
+        padding: 9px;
+      }
+
+      .item:nth-child(7) {
+        margin: 11px 0px 11px 12px;
+      }
+
+      .item:nth-child(13) > div:first-child {
+        height: 144px;
         margin-bottom: 10px;
       }
 
@@ -1063,8 +1089,8 @@
                 <div class="left">
                   <a href="#">오늘의 혜택</a>
                   <div id="main-shopping-animation">
-                    <a href="#">CJ</a>
-                    <a href="#">대표특가 확인하러가기! 패션부터 리빙 베스트 특가까지!</a>
+                    <a href="#">올리브영</a>
+                    <a href="#">올리브영어워즈 선정 올해의 BEST아이템! 최대 50%특가, 1+1기획</a>
                   </div>
                 </div>
                 <div class="right">
@@ -1075,16 +1101,48 @@
                 </div>
               </div>
               <div id="main-shopping-grid">
-                <div class="item">1</div>
-                <div class="item">2</div>
-                <div class="item">3</div>
-                <div class="item">4</div>
-                <div class="item">5</div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">신을수록 편안한 12월 득템 찬스</div>
+                </div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">역대급3종SET룩 최대90%까지!?</div>
+                </div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">자기 전 필수템<br /> 1개 더 증정</div>
+                </div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">연말 준비해요 반응좋은 생활템</div>
+                </div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">연말 감사! 10만원 쿠폰팩</div>
+                </div>
                 <div class="item">6</div>
                 <div class="item">7</div>
-                <div class="item">8</div>
-                <div class="item">9</div>
-                <div class="item">10</div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">양면 스타일링! 신상 최대24%</div>  
+                </div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">원단이 좋은 옷~브랜드 그이상!</div>  
+                </div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">밀가루 좋아해?이건 물건이야~</div>  
+                </div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">올헤 마지막혜택1+1 지금 쟁여요</div>
+                </div>
+                <div class="item">
+                  <div class="image"></div>
+                  <div class="text">기모가득후끈해 5+5켤레 다가져</div>
+                </div>
                 <div class="item">
                   <div></div>
                   <div>컬럼비아 롱패딩이 8만원대?!</div>
